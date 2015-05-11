@@ -5,15 +5,13 @@
  */
 
 var UI = require('ui');
-//var Vector2 = require('vector2');
 var ajax = require('ajax');
 
 
 
 var main = new UI.Card({
   title: 'Where AM I?',
-//  icon: 'images/menu_icon.png',
-	icon: 'images/h1_header_logo.png',
+  icon: 'images/logo.png',
 	body: 'To get current location push middle button.'
 });
 
@@ -26,7 +24,7 @@ main.on('click', 'up', function(e) {
     sections: [{
       items: [{
         title: 'Where Am I?',
-//        icon: 'images/menu_icon.png',
+        icon: 'images/menu_icon.png',
         subtitle: 'Can do Menus'
       }, {
         title: 'Second Item',
@@ -37,11 +35,10 @@ main.on('click', 'up', function(e) {
 
 
   menu.on('select', function(e) {
-		var wind = new UI.Window();
-
-
-    console.log('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
-    console.log('The item is titled "' + e.item.title + '"');
+    var card = new UI.Card();
+    card.title('The item is titled "' + e.item.title + '"');
+    card.body('Selected item #' + e.itemIndex + ' of section #' + e.sectionIndex);
+    card.show();
   });
   menu.show();
 });
