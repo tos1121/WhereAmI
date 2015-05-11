@@ -5,16 +5,16 @@
  */
 
 var UI = require('ui');
-var Vector2 = require('vector2');
+//var Vector2 = require('vector2');
 var ajax = require('ajax');
 
 
 
 var main = new UI.Card({
-  title: 'Pebble.js',
-  icon: 'images/menu_icon.png',
-  subtitle: 'Hello World!',
-  body: 'Press any button.'
+  title: 'Where AM I?',
+//  icon: 'images/menu_icon.png',
+	icon: 'images/h1_header_logo.png',
+	body: 'To get current location push middle button.'
 });
 
 main.show();
@@ -25,7 +25,7 @@ main.on('click', 'up', function(e) {
   var menu = new UI.Menu({
     sections: [{
       items: [{
-        title: 'Pebble.js',
+        title: 'Where Am I?',
 //        icon: 'images/menu_icon.png',
         subtitle: 'Can do Menus'
       }, {
